@@ -1,105 +1,58 @@
-import React from "react";
 import "boxicons/css/boxicons.min.css";
 
 const Header = () => {
   const toggleMenu = () => {
     const mobilemenu = document.getElementById("mobilemenu");
-
-    //if it has the hidden class ,remove it otherwise add it
-    if (mobilemenu.classList.contains("hidden")) {
-      mobilemenu.classList.remove("hidden");
-    } else {
-      mobilemenu.classList.add("hidden");
-    }
+    mobilemenu.classList.toggle("hidden");
   };
+
   return (
-    <header className="flex justify-between items-center py-6 px-6 lg:px-20">
-      <h1
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-        className="text-3xl md:text-4xl lg:text-5xl font-light m-0 px-6 md:px-12 lg:px-20"
-      >
-        RIMA KUMARI
+    <header className="flex justify-between items-center py-6 px-6 lg:px-20 fixed w-full top-0 bg-black bg-opacity-70 backdrop-blur z-50">
+      {/* Logo */}
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
+        <a
+          href="#home"
+          className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wider 
+             bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 
+             bg-clip-text text-transparent hover:scale-110 transition-transform duration-300"
+        >
+          RIMA KUMARI
+        </a>
       </h1>
 
-      {/* Deesktop Navigation */}
-
+      {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-12">
-        <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-          href="#"
-        >
+        <a href="#about" className="hover:text-gray-300">
           About
         </a>
-
-        <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-          href="#"
-        >
-          Project
+        <a href="#projects" className="hover:text-gray-300">
+          Projects
+        </a>
+        <a href="#techstack" className="hover:text-gray-300">
+          Tech Stack
         </a>
 
-        <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1800"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-          href="#"
-        >
-          Skills
-        </a>
-
-        <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="2000"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-          href="#"
-        >
-          Contact
-        </a>
-        <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="2300"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-          href="https://github.com/Rima-2004"
-        >
+        <a href="https://github.com/Rima-2004" target="_blank" rel="noreferrer">
           GitHub
         </a>
         <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="2700"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
           href="https://www.linkedin.com/in/rima-kumari-739391287/"
+          target="_blank"
+          rel="noreferrer"
         >
           LinkedIn
         </a>
-        <a
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="3200"
-          className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-          href="mailto:rima.simi2004@gmail.com"
-        >
-          Email
-        </a>
       </nav>
 
-      <button className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-non font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50">
-        SIGN IN
-      </button>
+      {/* CTA Button */}
+      <a
+        href="mailto:rima.simi2004@gmail.com?subject=Hiring Inquiry&body=Hi Rima, I would like to hire you for a project."
+        className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full font-medium transition-all duration-500 hover:bg-white"
+      >
+        HIRE ME
+      </a>
 
-      {/* mobile menu  */}
-
+      {/* Mobile Menu Button */}
       <button
         onClick={toggleMenu}
         className="block md:hidden text-3xl p-2 z-50"
@@ -107,38 +60,17 @@ const Header = () => {
         <i className="bx bx-menu"></i>
       </button>
 
-      {/* mobile side baar */}
+      {/* Mobile Side Menu */}
       <div
         id="mobilemenu"
-        className=" hidden fixed top-16 bottom-0 right-0 left-0 p-5 md:hidden z-40 bg-black bg-opacity-70 backdrop-blur- md"
+        className="hidden fixed top-16 bottom-0 right-0 left-0 p-5 md:hidden z-40 bg-black bg-opacity-70 backdrop-blur"
       >
         <nav className="flex flex-col gap-6 items-center">
-          <a
-            className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-            href="#"
-          >
-            Company
+          <a href="#about" onClick={toggleMenu}>
+            About
           </a>
-
-          <a
-            className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-            href="#"
-          >
-            Feature
-          </a>
-
-          <a
-            className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-            href="#"
-          >
-            Resources
-          </a>
-
-          <a
-            className="text-base tracking-wider transition-colors hover:text-grey-300 z-50 "
-            href="#"
-          >
-            docs
+          <a href="#projects" onClick={toggleMenu}>
+            Projects
           </a>
         </nav>
       </div>

@@ -8,3 +8,20 @@
     @apply bg-black text-white relative font-sans h-screen overflow-x-hidden
   }
 }
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  /* prevent horizontal scroll jank */
+  scroll-padding-top: 80px;
+  /* so sections aren’t hidden behind header */
+}
+
+[data-aos] {
+  will-change: transform, opacity;
+}
