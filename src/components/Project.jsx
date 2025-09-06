@@ -42,7 +42,7 @@ const Projects = () => {
     {
       title: "3D Portfolio Website",
       tech: "React.js, Tailwind CSS, Spline, Vercel",
-      link: "baseURL",
+      link: baseURL,
       description:
         "Designed a responsive, interactive 3D portfolio showcasing skills and projects.",
       features: [
