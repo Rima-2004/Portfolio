@@ -6,7 +6,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import TechStack from "./components/TechStack";
+import Techstack from "./components/Techstack";
 
 export default function App() {
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function App() {
       <Header />
       <Hero />
       <About />
-      <TechStack />
+      <Techstack />
       <Project />
       <Contact />
     </main>

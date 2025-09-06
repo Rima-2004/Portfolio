@@ -2,7 +2,7 @@ import React from "react";
 import { FaReact, FaNodeJs, FaDocker, FaAws, FaGitAlt } from "react-icons/fa";
 import { SiMongodb, SiJavascript, SiPython, SiCplusplus } from "react-icons/si";
 
-const TechStack = () => {
+const Techstack = () => {
   const skills = [
     { name: "React", icon: <FaReact className="text-blue-400" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
@@ -33,4 +33,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default Techstack;
