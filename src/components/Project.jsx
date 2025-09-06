@@ -1,6 +1,7 @@
 import React from "react";
 
 const Projects = () => {
+  const baseURL = import.meta.env.VITE_BASE_URL1;
   const projects = [
     {
       title: "Chat App",
@@ -41,7 +42,7 @@ const Projects = () => {
     {
       title: "3D Portfolio Website",
       tech: "React.js, Tailwind CSS, Spline, Vercel",
-      link: "https://portfolio-chi-ivory-q3cxx49n5a.vercel.app",
+      link: "baseURL",
       description:
         "Designed a responsive, interactive 3D portfolio showcasing skills and projects.",
       features: [
